@@ -1,0 +1,329 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color: 218;
+
+  --bg-header: hsla(var(--color), 23%, 21%, 1);
+  --bg-main: hsla(var(--color), 41%, 82%, 1);
+
+  --fm-secondary: #F67669;
+  --fm-primary: #FFFFFF;
+  
+  --tt-form: #253B51;
+  --tt-title: #FFFFFF;
+  --tx-label: #4E4958;
+
+  --bg-input: #FAFAFC;
+
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--bg-main);
+  font-family: 'Poppins', sans-serif;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding-top: 10.7rem;
+  margin-bottom: 10rem;
+}
+
+body::before {
+  content: "";
+  width: 100%;
+  height: 46.5rem;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-color: var(--bg-header);
+}
+
+header {
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Staatliches';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 3.6rem;
+  line-height: 4.5rem;
+
+  color: var(--tt-title);
+}
+
+h1 + p {
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+
+  color: var(--tt-title);
+  margin-bottom: 2.4rem;
+}
+
+header img {
+  margin-bottom: 3.2rem;
+}
+
+fieldset {
+  border: none;
+}
+
+.form {
+  background-color: var(--fm-primary);
+  padding: 5rem 6.4rem 6.9rem 6.4rem;
+  border-radius: 4rem 4rem 2rem 2rem;
+
+  position: relative;
+
+  width: 75rem;
+}
+
+.form fieldset:nth-child(1) .fieldset-wrapper legend {
+  font-family: 'Staatliches';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2.4rem;
+  line-height: 3.4rem;
+
+  text-align: center;
+  margin-bottom: 5rem;
+
+  position: relative;
+  z-index: 1;
+
+  color: var(--fm-primary);
+}
+
+.form-header-background {
+  width: 100%;
+  height: 13.3rem;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+  
+  border-radius: 2rem 2rem 0 0;
+
+  background-color: var(--fm-secondary);
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-wrapper label {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+
+  color: var(--tx-label);
+}
+
+.input-wrapper input,
+.input-wrapper select {
+  background: var(--bg-input);
+
+  border: 1px solid #E6E6F0;
+  border-radius: 8px;
+
+  font-size: 2rem;
+  line-height: 2.6rem;
+
+  color: #737276;
+  height: 5.5rem;
+
+  padding-left: 1rem;
+}
+
+textarea {
+  font-size: 2rem;
+  line-height: 2.6rem;
+
+  color: #737276;
+
+  padding: 1rem;
+}
+
+.form-header-background + div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.2rem;
+
+  padding-top: 3rem;
+
+  margin-bottom: 3.2rem;
+}
+
+.form-header-background + div .input-wrapper:nth-child(3) label span,
+.form fieldset:nth-child(3) .fieldset-wrapper div .input-wrapper label span {
+  font-size: 1.2rem;
+  line-height: 2.0rem;
+
+  margin-left: .9rem;
+
+  color: #C1BCCC;
+}
+
+.form-header-background + div .input-wrapper:nth-child(3) label span:hover,
+.form fieldset:nth-child(3) .fieldset-wrapper div .input-wrapper label span:hover {
+  color: #77757c;
+}
+
+.form-header-background + div .input-wrapper:nth-child(1),
+.form-header-background + div .input-wrapper:nth-child(2),
+.form fieldset:nth-child(2) .fieldset-wrapper .input-wrapper:nth-child(2) {
+  width: calc(50% - 1.1rem);
+}
+
+.form-header-background + div .input-wrapper:nth-child(3) {
+  width: 100%;
+}
+
+.form fieldset:nth-child(2) legend,
+.form fieldset:nth-child(3) legend {
+  font-family: 'Staatliches';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2.4rem;
+  line-height: 3.4rem;
+
+  text-align: center;
+
+  color: var(--tt-form);
+
+  border-bottom: 1px solid #E6E6F0;
+  padding-bottom: .8rem;
+  margin-bottom: 3.2rem;
+
+}
+
+.form fieldset:nth-child(2) .fieldset-wrapper .input-wrapper:nth-child(2) {
+  margin-bottom: 3.2rem;
+}
+
+label {
+  margin-bottom: .8rem;
+}
+
+textarea {
+  background: var(--bg-input);
+
+  border: 1px solid #E6E6F0;
+  border-radius: .8rem;
+
+  margin-bottom: 3rem;
+}
+
+.checkbox-wrapper {
+  position: relative;
+}
+
+.checkbox-wrapper label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  margin: 0 0 3.6rem;
+
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+
+  color: var(--tx-label);
+}
+
+.checkbox-wrapper input {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 24px;
+  height: 24px;
+
+  opacity: 0;
+}
+
+.checkbox-wrapper label::before {
+  content: "";
+  width: 24px;
+  height: 24px;
+
+  display: block;
+  background: var(--bg-input);
+  border: 1px solid #E6E6F0;
+  border-radius: 8px;
+}
+
+.checkbox-wrapper input:checked + label::before {
+  background-image: url("data:image/svg+xml,%3Csvg width='18' height='14' viewBox='0 0 18 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 11.17L1.83 7L0.410004 8.41L6 14L18 2L16.59 0.589996L6 11.17Z' fill='%2342D3FF'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.checkbox-wrapper input:focus + label::before {
+  outline: 2px solid black;
+}
+
+.form fieldset:nth-child(3) .fieldset-wrapper div{
+  display: flex;
+}
+
+.form fieldset:nth-child(3) .fieldset-wrapper div .input-wrapper:nth-child(1) {
+  margin-right: 3.2rem;
+  width: 30rem;
+}
+
+.form fieldset:nth-child(3) .fieldset-wrapper div .input-wrapper:nth-child(2) {
+  margin-right: 1rem;
+}
+
+.form fieldset:nth-child(3) .fieldset-wrapper div .input-wrapper:nth-child(2),
+.form fieldset:nth-child(3) .fieldset-wrapper div .input-wrapper:nth-child(3) {
+  width: 14rem;
+}
+
+button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  width: 62.2rem;
+  height: 5.1rem;
+
+  background: var(--fm-secondary);
+  border-radius: 8px;
+
+  font-family: 'Staatliches';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 2.6rem;
+
+  color: var(--fm-primary);
+
+  border: none;
+  margin-top: 6.3rem;
+
+  cursor: pointer;
+  transition: .5s;
+}
+
+button:hover {
+  background: #f06455;
+}
+
